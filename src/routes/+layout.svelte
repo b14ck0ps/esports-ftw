@@ -1,5 +1,6 @@
 <script>
     import "../app.css";
+    import logo from "$lib/assets/logo-with-text.png";
 </script>
 
 <body class="flex flex-col min-h-screen">
@@ -10,7 +11,7 @@
         >
             <div class="flex items-center">
                 <!-- Logo -->
-                <img class="w-44" src="https://i.imgur.com/oCZ525O.png" alt="Logo" />
+                <img class="w-44" src={logo} alt="Logo" />
             </div>
             <div class="flex items-center gap-10 ml-5 font-semibold">
                 <!-- Navigation Links -->
