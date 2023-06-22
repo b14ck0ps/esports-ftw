@@ -5,7 +5,7 @@
 <body class="flex flex-col min-h-screen">
     <header class="bg-gray-900 text-white py-4">
         <!-- Navigation Bar -->
-        <nav class="container mx-auto flex justify-between items-center px-4">
+        <nav class="container mx-auto flex justify-normal items-center px-4 gap-4">
             <div class="flex items-center">
                 <!-- Logo -->
                 <img
@@ -13,23 +13,17 @@
                     alt="Logo"
                 />
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center gap-10 ml-5 font-semibold">
                 <!-- Navigation Links -->
-                <a href="/" class="text-gray-300 hover:text-white px-3">Home</a>
-                <a href="/about" class="text-gray-300 hover:text-white px-3"
-                    >About</a
-                >
-                <a href="_" class="text-gray-300 hover:text-white px-3"
-                    >Services</a
-                >
-                <a href="/Contact" class="text-gray-300 hover:text-white px-3"
-                    >contact</a
-                >
+                <a href="/tournament" class="text-gray-300 hover:text-[#48f955]">Tournament</a>
+                <a href="/games" class="text-gray-300 hover:text-[#48f955]">Games</a>
+                <a href="/teams" class="text-gray-300 hover:text-[#48f955]">Teams</a>
+                
             </div>
         </nav>
     </header>
 
-    <main class="flex-grow bg-gray-100 py-8">
+    <main class="flex-grow bg-gray-800 py-8">
         <!-- Main Content -->
         <slot />
     </main>
