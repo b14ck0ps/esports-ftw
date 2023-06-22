@@ -11,7 +11,7 @@
         >
             <div class="flex items-center">
                 <!-- Logo -->
-                <img class="w-44" src={logo} alt="Logo" />
+                <a href="/"><img class="w-44" src={logo} alt="Logo" /> </a>
             </div>
             <div class="flex items-center gap-10 ml-5 font-semibold">
                 <!-- Navigation Links -->
