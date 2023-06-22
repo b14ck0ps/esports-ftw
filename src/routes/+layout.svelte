@@ -37,7 +37,7 @@
         <!-- Footer -->
         <div class="container mx-auto px-4">
             <p class="text-center">
-                &copy; 2023 Your Company. All rights reserved.
+                &copy; 2023 E-SPORTS FTW. All rights reserved.
             </p>
         </div>
     </footer>

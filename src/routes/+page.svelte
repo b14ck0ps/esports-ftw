@@ -21,7 +21,7 @@
     />
 </head>
 <main>
-    <div class="gradient p-10 w-3/4 m-auto rounded-lg">
+    <div class="gradient p-10 w-3/4 m-auto rounded-t-lg">
         <div class="flex flex-col justify-center items-center">
             <h1 class="text-3xl font-semibold text-center my-3 mb-8">
                 Everything about the esports popularity
@@ -91,6 +91,49 @@
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+    <div
+        class="bg-gray-900 w-3/4 m-auto rounded-b-lg flex items-center justify-between"
+    >
+        <div class="flex gap-8 items-center p-5">
+            <p>Our Database Incluses:</p>
+        </div>
+        <div
+            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+        >
+            <div>
+                <p class="text-xl font-semibold">12 00</p>
+                <p>{"Tournaments & events".toUpperCase()}</p>
+            </div>
+            <i class="fa-solid fa-arrow-right" />
+        </div>
+        <div
+            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+        >
+            <div>
+                <p class="text-xl font-semibold">600</p>
+                <p>{"games".toUpperCase()}</p>
+            </div>
+            <i class="fa-solid fa-arrow-right" />
+        </div>
+        <div
+            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+        >
+            <div>
+                <p class="text-xl font-semibold">21 000</p>
+                <p>{"players".toUpperCase()}</p>
+            </div>
+            <i class="fa-solid fa-arrow-right" />
+        </div>
+        <div
+            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+        >
+            <div>
+                <p class="text-xl font-semibold">769</p>
+                <p>{"teams".toUpperCase()}</p>
+            </div>
+            <i class="fa-solid fa-arrow-right" />
         </div>
     </div>
 </main>
