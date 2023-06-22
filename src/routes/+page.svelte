@@ -1,3 +1,10 @@
+<script>
+    import oracle from "$lib/assets/icons/oracle.png";
+    import dotnet from "$lib/assets/icons/dotnetseven.webp";
+    import svelte from "$lib/assets/icons/svelte.svg";
+    import logo from "$lib/assets/icons/logo.png";
+</script>
+
 <head>
     <link
         rel="stylesheet"
@@ -6,54 +13,79 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet"
+    />
 </head>
 <main>
-    <div class="flex flex-col justify-center items-center">
-        <h1 class="text-3xl font-semibold text-center my-3 mb-8">
-            Everything about the esports popularity
-        </h1>
-        <p class="text-center w-[1000px]">
-            Esports Charts is a unique analytical service that explores the
-            development of esports and streaming in general. Our service makes
-            esports more honest and clear, helps sponsors, organizers and
-            viewers to find out the popularity of any broadcast and esports
-            event.
-        </p>
-
-        <div class="mt-10 flex gap-3 justify-center items-center">
-            <div class="bg-[#091523] py-3 px-8 rounded-full font-semibold">
-                <img class="w-5 inline-block" src="https://i.imgur.com/0DFGcuj.png" alt="log">
-                Esports Charts
-            </div>
-            <p class="font-bold text-2xl">=</p>
-            <div class="bg-[#091523] py-3 px-8 rounded-full font-semibold">
-                <img
-                    class="inline-block h-6 mr-2"
-                    src="https://i.imgur.com/6w00nmR.png"
-                    alt=""
-                    srcset=""
-                />
-                Oracle 11G
-            </div>
-            <p class="font-bold text-2xl">+</p>
-            <div class="bg-[#091523] py-3 px-8 rounded-full font-semibold">
-                <img
-                    class="inline-block h-6 mr-2"
-                    src="https://i.imgur.com/kQ4fIwx_d.webp"
-                    alt=""
-                    srcset=""
-                />
-                Dot Net 7.0
-            </div>
-            <p class="font-bold text-2xl">+</p>
-            <div class="bg-[#091523] py-3 px-8 rounded-full font-semibold">
-                <img
-                    class="inline-block w-8 mr-2"
-                    src="https://raw.githubusercontent.com/icons-pack/svelte-simple-icons/a88f75163772a7573fb385255e40b6982ad5e168/docs/svg/svelte-simple-icons.svg"
-                    alt=""
-                    srcset=""
-                />
-                SvelteKit
+    <div class="gradient p-10 w-3/4 m-auto rounded-lg">
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-semibold text-center my-3 mb-8">
+                Everything about the esports popularity
+            </h1>
+            <p class="text-center w-[1000px]">
+                Esports Charts is a unique analytical service that explores the
+                development of esports and streaming in general. Our service
+                makes esports more honest and clear, helps sponsors, organizers
+                and viewers to find out the popularity of any broadcast and
+                esports event.
+            </p>
+            <div class="mt-10 flex gap-3 justify-center items-center">
+                <a href="/">
+                    <div
+                        class="bg-[#091523] py-3 px-6 rounded-full font-semibold flex justify-center items-center gap-2 opacity-90 hover:cursor-pointer hover:scale-105 transition"
+                    >
+                        <img class="w-5 inline-block" src={logo} alt="log" />
+                        Esports FTW
+                    </div>
+                </a>
+                <p class="font-bold text-2xl">=</p>
+                <a href="https://github.com/wnameless/docker-oracle-xe-11g">
+                    <div
+                        class="bg-[#091523] py-3 px-6 rounded-full font-semibold flex items-center justify-normal gap-2 opacity-90 hover:cursor-pointer hover:scale-105 transition"
+                    >
+                        <img
+                            class="inline-block h-6 mr-2"
+                            src={oracle}
+                            alt=""
+                            srcset=""
+                        />
+                        Oracle 11G
+                    </div>
+                </a>
+                <p class="font-bold text-2xl">+</p>
+                <a
+                    href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-7"
+                >
+                    <div
+                        class="bg-[#091523] py-3 px-8 rounded-full font-semibold opacity-90 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition"
+                    >
+                        <img
+                            class="inline-block h-6 mr-2"
+                            src={dotnet}
+                            alt=""
+                            srcset=""
+                        />
+                        Dot Net 7.0
+                    </div>
+                </a>
+                <p class="font-bold text-2xl">+</p>
+                <a href="https://kit.svelte.dev/">
+                    <div
+                        class="bg-[#091523] py-3 px-8 rounded-full font-semibold opacity-90 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition"
+                    >
+                        <img
+                            class="inline-block w-8 mr-2"
+                            src={svelte}
+                            alt=""
+                            srcset=""
+                        />
+                        SvelteKit
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -62,5 +94,10 @@
 <style>
     main {
         color: white;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .gradient {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     }
 </style>
