@@ -100,7 +100,7 @@
             <p>Our Database Incluses:</p>
         </div>
         <div
-            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+            class="flex justify-between gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
         >
             <div>
                 <p class="text-xl font-semibold">12 00</p>
@@ -109,7 +109,7 @@
             <i class="fa-solid fa-arrow-right" />
         </div>
         <div
-            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+            class="flex justify-between gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
         >
             <div>
                 <p class="text-xl font-semibold">600</p>
@@ -118,7 +118,7 @@
             <i class="fa-solid fa-arrow-right" />
         </div>
         <div
-            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+            class="flex justify-between gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
         >
             <div>
                 <p class="text-xl font-semibold">21 000</p>
@@ -127,7 +127,7 @@
             <i class="fa-solid fa-arrow-right" />
         </div>
         <div
-            class="flex gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
+            class="flex justify-between gap-8 items-center p-5 border-l-2 border-y-0 border-collapse border-gray-700 hover:cursor-pointer hover:bg-gray-700 flex-grow"
         >
             <div>
                 <p class="text-xl font-semibold">769</p>
