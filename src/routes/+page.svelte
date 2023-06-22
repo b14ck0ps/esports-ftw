@@ -43,7 +43,10 @@
                     </div>
                 </a>
                 <p class="font-bold text-2xl">=</p>
-                <a href="https://github.com/wnameless/docker-oracle-xe-11g">
+                <a
+                    href="https://github.com/wnameless/docker-oracle-xe-11g"
+                    target="_blank"
+                >
                     <div
                         class="bg-[#091523] py-3 px-6 rounded-full font-semibold flex items-center justify-normal gap-2 opacity-90 hover:cursor-pointer hover:scale-105 transition"
                     >
@@ -59,6 +62,7 @@
                 <p class="font-bold text-2xl">+</p>
                 <a
                     href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-7"
+                    target="_blank"
                 >
                     <div
                         class="bg-[#091523] py-3 px-8 rounded-full font-semibold opacity-90 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition"
@@ -73,7 +77,7 @@
                     </div>
                 </a>
                 <p class="font-bold text-2xl">+</p>
-                <a href="https://kit.svelte.dev/">
+                <a href="https://kit.svelte.dev/" target="_blank">
                     <div
                         class="bg-[#091523] py-3 px-8 rounded-full font-semibold opacity-90 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition"
                     >
