@@ -1,6 +1,28 @@
 <script>
     import "../app.css";
     import logo from "$lib/assets/logo-with-text.png";
+    import { onMount } from "svelte";
+
+    let isEnoughScreenAvailable = true;
+
+    onMount(() => {
+        // Function to check screen resolution
+        function checkScreenResolution() {
+            isEnoughScreenAvailable =
+                window.innerWidth >= 1524 && window.innerHeight >= 800;
+        }
+
+        // Initial check on component mount
+        checkScreenResolution();
+
+        // Listen for window resize and re-check the screen resolution
+        window.addEventListener("resize", checkScreenResolution);
+
+        return () => {
+            // Cleanup: remove event listener on component unmount
+            window.removeEventListener("resize", checkScreenResolution);
+        };
+    });
 </script>
 
 <body class="flex flex-col min-h-screen">
@@ -28,10 +50,20 @@
         </nav>
     </header>
 
-    <main class="flex-grow bg-gray-800 py-8">
-        <!-- Main Content -->
-        <slot />
-    </main>
+    {#if isEnoughScreenAvailable}
+        <main class="flex-grow bg-gray-800 py-8">
+            <!-- Main Content -->
+            <slot />
+        </main>
+    {:else}
+        <div class="flex-grow bg-gray-800 py-8">
+            <p class="text-center text-white mt-[25vh]">
+                Don't have enough time to make this responsive. <br /> Please
+                use desktop or get a bigger screen to view this website.
+                <span class="block mt-3"> - Dev Team 🫡 </span>
+            </p>
+        </div>
+    {/if}
 
     <footer class="bg-gray-900 text-white py-4">
         <!-- Footer -->
