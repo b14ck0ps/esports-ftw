@@ -26,12 +26,11 @@
             date: new Date().toLocaleDateString().replace(/\//g, "."),
         },
     ];
-    function getRandomFutureDate() {
-        return new Date(
-            Date.now() + Math.floor(Math.random() * 30 * 24 * 60 * 60 * 1000)
-        )
-            .toLocaleDateString()
-            .replace(/\//g, ".");
+    function getRandomPastDate() {
+        const randomPastDate = new Date(
+            Date.now() - Math.floor(Math.random() * 30 * 24 * 60 * 60 * 1000)
+        );
+        return randomPastDate.toLocaleDateString().replace(/\//g, ".");
     }
 </script>
 
@@ -93,7 +92,7 @@
                             </div>
                         </div>
                         <p class="text-xs">
-                            {getRandomFutureDate()}
+                            {getRandomPastDate()}
                         </p>
                     </div>
                 {/each}
