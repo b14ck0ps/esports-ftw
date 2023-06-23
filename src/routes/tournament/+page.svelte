@@ -91,6 +91,19 @@
             </div>
         </div>
     </section>
+
+    <!-- search -->
+
+    <div class="relative">
+        <input
+            class="mt-10 w-full rounded-xl bg-gray-900 px-5 py-1 focus:outline-none pl-10 placeholder:text-gray-500"
+            placeholder="Search tournament by name"
+            type="text"
+        />
+        <i
+            class="fa-solid fa-magnifying-glass absolute top-12 left-3 text-gray-400"
+        />
+    </div>
 </main>
 
 <style>
