@@ -5,6 +5,7 @@
     import logo from "$lib/assets/icons/logo.png";
     import RecentTournaments from "./RecentTournaments.svelte";
     import UpcomminTournament from "./upcomminTournament.svelte";
+    import TopGames from "./TopGames.svelte";
 </script>
 
 <head>
@@ -141,6 +142,7 @@
     <div class="flex justify-between w-3/4 m-auto mt-10">
         <RecentTournaments />
         <UpcomminTournament />
+        <TopGames />
     </div>
     <!-- section for recent items -->
 </main>
