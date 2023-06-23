@@ -1,3 +1,7 @@
+<script>
+    import TournamentLists from "./tournamentLists.svelte";
+</script>
+
 <main class="w-3/4 m-auto">
     <section>
         <!-- normal filters -->
@@ -104,6 +108,8 @@
             class="fa-solid fa-magnifying-glass absolute top-12 left-3 text-gray-400"
         />
     </div>
+    <!-- tournamnet list -->
+    <TournamentLists />
 </main>
 
 <style>
