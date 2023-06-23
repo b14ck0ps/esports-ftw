@@ -9,7 +9,7 @@
         // Function to check screen resolution
         function checkScreenResolution() {
             isEnoughScreenAvailable =
-                window.innerWidth >= 1524 && window.innerHeight >= 800;
+                window.innerWidth >= 1440 && window.innerHeight >= 300;
         }
 
         // Initial check on component mount
