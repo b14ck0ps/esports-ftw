@@ -30,11 +30,16 @@
                 Everything about the esports popularity
             </h1>
             <p class="text-center w-[1000px]">
-                Esports Charts is a unique analytical service that explores the
-                development of esports and streaming in general. Our service
-                makes esports more honest and clear, helps sponsors, organizers
-                and viewers to find out the popularity of any broadcast and
-                esports event.
+                Esports FTW is not just another analytical service. We are a
+                team of passionate gamers and esports enthusiasts who are
+                dedicated to exploring the development of esports. Our service
+                is designed to make esports more honest and clear, helping
+                sponsors, organizers, and fans alike to better understand the
+                industry. With our cutting-edge technology and expert analysis,
+                we provide a unique perspective on the world of esports that you
+                won't find anywhere else. Whether you're a casual fan or a
+                seasoned pro, Esports FTW has something for everyone. Join us
+                today and discover the future of esports!
             </p>
             <div class="mt-10 flex gap-3 justify-center items-center">
                 <a href="/">
