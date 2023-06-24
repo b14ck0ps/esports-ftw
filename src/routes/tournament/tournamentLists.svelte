@@ -110,7 +110,7 @@
                             </p>
                         </div>
                         {#if tournament.isOngoing}<span
-                                class="text-white rounded font-semibold bg-green-400 px-2 py-[1px] text-[.6em] bg-opacity-40"
+                                class="badge variant-ghost-primary"
                                 >On Going</span
                             >{/if}</td
                     >

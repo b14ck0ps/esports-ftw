@@ -116,7 +116,7 @@
                     <td class="px-4 py-2 text-gray-100">{game.platform}</td>
                     <td class="px-4 py-2 text-gray-100 text-right">
                         {#if game.isOngoing}<span
-                                class="text-white rounded font-semibold bg-green-400 px-2 py-[1px] text-[.6em] bg-opacity-40"
+                                class="badge variant-ghost-primary"
                                 >On Going: 1</span
                             > /{/if}
                         {game.totalTournament}</td

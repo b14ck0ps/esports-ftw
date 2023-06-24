@@ -1,5 +1,8 @@
 <script>
+    import "@skeletonlabs/skeleton/themes/theme-skeleton.css";
+    import "@skeletonlabs/skeleton/styles/skeleton.css";
     import "../app.css";
+
     import logo from "$lib/assets/logo-with-text.png";
     import { onMount } from "svelte";
     import { page } from "$app/stores";
