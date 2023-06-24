@@ -45,28 +45,28 @@
                 <a
                     href="/tournament"
                     class="{routeId === '/tournament'
-                        ? 'text-[#48f955]'
-                        : 'text-gray-300'}  hover:text-[#48f955]">Tournament</a
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">Tournament</a
                 >
                 <a
                     href="/games"
                     class="{routeId === '/games'
-                        ? 'text-[#48f955]'
-                        : 'text-gray-300'}  hover:text-[#48f955]">Games</a
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">Games</a
                 >
                 <a
                     href="/teams"
                     class="{routeId === '/teams'
-                        ? 'text-[#48f955]'
-                        : 'text-gray-300'}  hover:text-[#48f955]">Teams</a
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">Teams</a
                 >
             </div>
         </nav>
         <a
             href="/login"
-            class="hover:text-[#48f955] px-4 py-2 rounded-md mr-5 border hover:border-[#48f955] font-semibold {routeId ===
+            class="hover:text-green-ftw px-4 py-2 rounded-md mr-5 border hover:border-green-ftw font-semibold {routeId ===
             '/login'
-                ? 'text-[#48f955]  border-[#48f955]'
+                ? 'text-green-ftw  border-green-ftw'
                 : ' border-transparent'} ">Login</a
         >
     </header>
