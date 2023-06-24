@@ -83,7 +83,7 @@
     ];
 </script>
 
-<main class="bg-gray-900">
+<main class="bg-gray-900 p-2 rounded-xl mt-3">
     <table class="w-full table-fixed mt-3">
         <thead>
             <tr>
