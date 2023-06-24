@@ -83,26 +83,20 @@
     ];
 </script>
 
-<main class="bg-gray-900 p-2 rounded-xl mt-3">
-    <table class="w-full table-fixed mt-3">
+<main class="p-2 mt-3 rounded-xl table-container">
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100">Name</th>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100"
-                    >Prize Pool</th
-                >
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100">Platform</th
-                >
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100"
-                    >Event Date</th
-                >
+                <th>Name</th>
+                <th>Prize Pool</th>
+                <th>Platform</th>
+                <th>Event Date</th>
             </tr>
         </thead>
         <tbody>
             {#each tournaments as tournament, i}
-                <tr class={i % 2 === 0 ? "bg-[#0d131f]" : "bg-[#111827]"}>
-                    <td
-                        class="px-4 py-2 text-gray-100 flex items-center justify-between"
+                <tr>
+                    <td class="flex items-center justify-between"
                         ><div>
                             <p>{tournament.name}</p>
                             <p class="text-xs">
@@ -114,15 +108,9 @@
                                 >On Going</span
                             >{/if}</td
                     >
-                    <td class="px-4 py-2 text-gray-100"
-                        >{tournament.prizePool}</td
-                    >
-                    <td class="px-4 py-2 text-gray-100"
-                        >{tournament.platform}</td
-                    >
-                    <td class="px-4 py-2 text-gray-100"
-                        >{tournament.eventDate}</td
-                    >
+                    <td>{tournament.prizePool}</td>
+                    <td>{tournament.platform}</td>
+                    <td>{tournament.eventDate}</td>
                 </tr>
             {/each}
         </tbody>
@@ -130,11 +118,11 @@
     <!-- pagination -->
     <div class="flex items-center justify-center mt-3">
         <button
-            class="bg-gray-800 text-gray-100 px-3 py-1 rounded-l hover:bg-gray-700"
+            class="px-3 py-1 text-gray-100 bg-gray-800 rounded-l hover:bg-gray-700"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block"
+                class="inline-block w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
             >
@@ -145,24 +133,24 @@
                 />
             </svg>
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             1
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             2
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             3
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             4
         </button>
         <button
-            class="bg-gray-800 text-gray-100 px-3 py-1 rounded-r hover:bg-gray-700"
+            class="px-3 py-1 text-gray-100 bg-gray-800 rounded-r hover:bg-gray-700"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block"
+                class="inline-block w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
             >
