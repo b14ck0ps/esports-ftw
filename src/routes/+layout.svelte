@@ -25,10 +25,13 @@
         };
     });
     $: routeId = $page.route.id;
+    $: console.log(routeId);
 </script>
 
 <body class="flex flex-col min-h-screen">
-    <header class="bg-gray-900 text-white py-4">
+    <header
+        class="bg-gray-900 text-white py-4 flex justify-between items-center"
+    >
         <!-- Navigation Bar -->
         <nav
             class="container mx-auto flex justify-normal items-center px-4 gap-4"
@@ -59,6 +62,13 @@
                 >
             </div>
         </nav>
+        <a
+            href="/login"
+            class="hover:text-[#48f955] px-4 py-2 rounded-md mr-5 border hover:border-[#48f955] font-semibold {routeId ===
+            '/login'
+                ? 'text-[#48f955]  border-[#48f955]'
+                : ' border-transparent'} ">Login</a
+        >
     </header>
 
     {#if isEnoughScreenAvailable}
