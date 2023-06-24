@@ -1,5 +1,8 @@
 <script>
+    import "@skeletonlabs/skeleton/themes/theme-skeleton.css";
+    import "@skeletonlabs/skeleton/styles/skeleton.css";
     import "../app.css";
+
     import logo from "$lib/assets/logo-with-text.png";
     import { onMount } from "svelte";
     import { page } from "$app/stores";
@@ -28,10 +31,12 @@
 </script>
 
 <body class="flex flex-col min-h-screen">
-    <header class="bg-gray-900 text-white py-4">
+    <header
+        class="flex items-center justify-between py-4 text-white bg-gray-900"
+    >
         <!-- Navigation Bar -->
         <nav
-            class="container mx-auto flex justify-normal items-center px-4 gap-4"
+            class="container flex items-center gap-4 px-4 mx-auto justify-normal"
         >
             <div class="flex items-center">
                 <!-- Logo -->
@@ -42,32 +47,39 @@
                 <a
                     href="/tournament"
                     class="{routeId === '/tournament'
-                        ? 'text-[#48f955]'
-                        : 'text-gray-300'}  hover:text-[#48f955]">Tournament</a
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">Tournament</a
                 >
                 <a
                     href="/games"
                     class="{routeId === '/games'
-                        ? 'text-[#48f955]'
-                        : 'text-gray-300'}  hover:text-[#48f955]">Games</a
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">Games</a
                 >
                 <a
                     href="/teams"
                     class="{routeId === '/teams'
-                        ? 'text-[#48f955]'
-                        : 'text-gray-300'}  hover:text-[#48f955]">Teams</a
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">Teams</a
                 >
             </div>
         </nav>
+        <a
+            href="/login"
+            class="hover:text-green-ftw px-4 py-2 rounded-md mr-5 border hover:border-green-ftw font-semibold {routeId ===
+            '/login'
+                ? 'text-green-ftw  border-green-ftw'
+                : ' border-transparent'} ">Login</a
+        >
     </header>
 
     {#if isEnoughScreenAvailable}
-        <main class="flex-grow bg-gray-800 py-8">
+        <main class="flex-grow py-8 bg-gray-800">
             <!-- Main Content -->
             <slot />
         </main>
     {:else}
-        <div class="flex-grow bg-gray-800 py-8">
+        <div class="flex-grow py-8 bg-gray-800">
             <p class="text-center text-white mt-[25vh]">
                 Don't have enough time to make this responsive. <br /> Please
                 use desktop or get a bigger screen to view this website.
@@ -76,9 +88,9 @@
         </div>
     {/if}
 
-    <footer class="bg-gray-900 text-white py-4">
+    <footer class="py-4 text-white bg-gray-900">
         <!-- Footer -->
-        <div class="container mx-auto px-4">
+        <div class="container px-4 mx-auto">
             <p class="text-center">
                 &copy; 2023 E-SPORTS FTW. All rights reserved.
             </p>

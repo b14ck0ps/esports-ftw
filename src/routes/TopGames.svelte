@@ -29,18 +29,18 @@
 </script>
 
 <main>
-    <div class="flex justify-between items-center">
+    <div class="flex items-center justify-between">
         <div>
             <!--Header-->
-            <div class="flex gap-20 items-center">
+            <div class="flex items-center gap-20">
                 <div class="flex items-center gap-3">
                     <i
-                        class="fa-solid fa-clock-rotate-left bg-gray-900 p-2 rounded-lg"
+                        class="p-2 bg-gray-900 rounded-lg fa-solid fa-clock-rotate-left"
                     />
                     <p class="font-bold">Top Games</p>
                 </div>
                 <div
-                    class="flex text-sm items-center gap-4 bg-gray-900 rounded-lg px-4 py-2 cursor-pointer hover:bg-gray-700 transition-all"
+                    class="flex items-center gap-4 px-4 py-2 text-sm transition-all bg-gray-900 rounded-lg cursor-pointer hover:bg-gray-700"
                 >
                     <p>More</p>
                     <i class="fa-solid fa-arrow-right" />
@@ -50,7 +50,7 @@
                 <!--lists, get this list from API-->
                 {#each t_games as game}
                     <div
-                        class="flex justify-between mb-2 bg-gray-900 p-3 rounded-xl cursor-pointer hover:scale-x-105 transition-all"
+                        class="flex justify-between p-3 mb-2 transition-all bg-gray-900 cursor-pointer rounded-xl hover:scale-x-105"
                     >
                         <div>
                             <div class="flex items-center gap-3">
