@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+    import { Table, tableMapperValues } from "@skeletonlabs/skeleton";
+    import type { TableSource } from "@skeletonlabs/skeleton";
     const games = [
         {
             name: "Valorant",
@@ -81,58 +83,38 @@
             isOngoing: false,
         },
     ];
+    const game_table: TableSource = {
+        // A list of heading labels.
+        head: ["name", "Type", "prize Pool", "Platform", "Total Tournament"],
+        // The data visibly shown in your table body UI.
+        body: tableMapperValues(games, [
+            "name",
+            "Type",
+            "prizePool",
+            "platform",
+            "totalTournament",
+        ]),
+    };
 </script>
 
-<main class="bg-gray-900 p-2 rounded-xl mt-3">
-    <table class="w-full table-fixed mt-3">
-        <thead>
-            <tr>
-                <th class="w-6"><i class="fa-solid fa-list" /></th>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100">Name</th>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100">Type</th>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100"
-                    >Prize Pool</th
-                >
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100">Platform</th
-                >
-                <th class="w-1/6 px-4 py-2 text-gray-100 text-right"
-                    >Total Tournament</th
-                >
-            </tr>
-        </thead>
-        <tbody>
-            {#each games as game, i}
-                <tr class={i % 2 === 0 ? "bg-[#0d131f]" : "bg-[#111827]"}>
-                    <td>
-                        {i + 1}
-                    </td>
-                    <td
-                        class="px-4 py-2 text-gray-100 flex items-center justify-between"
-                        ><div>
-                            <p>{game.name}</p>
-                        </div>
-                    </td><td class="px-4 py-2 text-gray-100">{game.Type}</td>
-                    <td class="px-4 py-2 text-gray-100">{game.prizePool}</td>
-                    <td class="px-4 py-2 text-gray-100">{game.platform}</td>
-                    <td class="px-4 py-2 text-gray-100 text-right">
-                        {#if game.isOngoing}<span
-                                class="badge variant-ghost-primary"
-                                >On Going: 1</span
-                            > /{/if}
-                        {game.totalTournament}</td
-                    >
-                </tr>
-            {/each}
-        </tbody>
-    </table>
+<main class="p-2 mt-3">
+    <Table
+        class="w-full mt-3 table-fixed"
+        source={game_table}
+        interactive
+        striped
+        bordered
+        hover
+        small
+    />
     <!-- pagination -->
     <div class="flex items-center justify-center mt-3">
         <button
-            class="bg-gray-800 text-gray-100 px-3 py-1 rounded-l hover:bg-gray-700"
+            class="px-3 py-1 text-gray-100 bg-gray-800 rounded-l hover:bg-gray-700"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block"
+                class="inline-block w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
             >
@@ -143,24 +125,24 @@
                 />
             </svg>
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             1
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             2
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             3
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             4
         </button>
         <button
-            class="bg-gray-800 text-gray-100 px-3 py-1 rounded-r hover:bg-gray-700"
+            class="px-3 py-1 text-gray-100 bg-gray-800 rounded-r hover:bg-gray-700"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block"
+                class="inline-block w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
             >

@@ -28,16 +28,15 @@
         };
     });
     $: routeId = $page.route.id;
-    $: console.log(routeId);
 </script>
 
 <body class="flex flex-col min-h-screen">
     <header
-        class="bg-gray-900 text-white py-4 flex justify-between items-center"
+        class="flex items-center justify-between py-4 text-white bg-gray-900"
     >
         <!-- Navigation Bar -->
         <nav
-            class="container mx-auto flex justify-normal items-center px-4 gap-4"
+            class="container flex items-center gap-4 px-4 mx-auto justify-normal"
         >
             <div class="flex items-center">
                 <!-- Logo -->
@@ -75,12 +74,12 @@
     </header>
 
     {#if isEnoughScreenAvailable}
-        <main class="flex-grow bg-gray-800 py-8">
+        <main class="flex-grow py-8 bg-gray-800">
             <!-- Main Content -->
             <slot />
         </main>
     {:else}
-        <div class="flex-grow bg-gray-800 py-8">
+        <div class="flex-grow py-8 bg-gray-800">
             <p class="text-center text-white mt-[25vh]">
                 Don't have enough time to make this responsive. <br /> Please
                 use desktop or get a bigger screen to view this website.
@@ -89,9 +88,9 @@
         </div>
     {/if}
 
-    <footer class="bg-gray-900 text-white py-4">
+    <footer class="py-4 text-white bg-gray-900">
         <!-- Footer -->
-        <div class="container mx-auto px-4">
+        <div class="container px-4 mx-auto">
             <p class="text-center">
                 &copy; 2023 E-SPORTS FTW. All rights reserved.
             </p>

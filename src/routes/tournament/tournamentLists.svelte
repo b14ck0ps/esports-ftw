@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+    import { Table, tableMapperValues } from "@skeletonlabs/skeleton";
+    import type { TableSource } from "@skeletonlabs/skeleton";
     const tournaments = [
         {
             name: "Tournament 1",
@@ -81,40 +83,29 @@
             isOngoing: false,
         },
     ];
+    const tournament_table: TableSource = {
+        // A list of heading labels.
+        head: ["Name", "Prize Pool", "Platform", "Event Date"],
+        // The data visibly shown in your table body UI.
+        body: tableMapperValues(tournaments, [
+            "name",
+            "prizePool",
+            "platform",
+            "eventDate",
+        ]),
+    };
 </script>
 
 <main class="p-2 mt-3 rounded-xl table-container">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Prize Pool</th>
-                <th>Platform</th>
-                <th>Event Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each tournaments as tournament, i}
-                <tr>
-                    <td class="flex items-center justify-between"
-                        ><div>
-                            <p>{tournament.name}</p>
-                            <p class="text-xs">
-                                {tournament.game}
-                            </p>
-                        </div>
-                        {#if tournament.isOngoing}<span
-                                class="badge variant-ghost-primary"
-                                >On Going</span
-                            >{/if}</td
-                    >
-                    <td>{tournament.prizePool}</td>
-                    <td>{tournament.platform}</td>
-                    <td>{tournament.eventDate}</td>
-                </tr>
-            {/each}
-        </tbody>
-    </table>
+    <Table
+        class="w-full mt-3 table-fixed"
+        source={tournament_table}
+        interactive
+        striped
+        bordered
+        hover
+        small
+    />
     <!-- pagination -->
     <div class="flex items-center justify-center mt-3">
         <button

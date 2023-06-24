@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+    import { Table, tableMapperValues } from "@skeletonlabs/skeleton";
+    import type { TableSource } from "@skeletonlabs/skeleton";
     const teams = [
         {
             name: "Team 1",
@@ -71,47 +73,38 @@
             location: "NYC",
         },
     ];
+    const teams_table: TableSource = {
+        // A list of heading labels.
+        head: ["Name", "Game", "Prize Pool", "Total Game", "Location"],
+        // The data visibly shown in your table body UI.
+        body: tableMapperValues(teams, [
+            "name",
+            "game",
+            "prizePool",
+            "totalGame",
+            "location",
+        ]),
+    };
 </script>
 
-<main class="bg-gray-900 p-2 rounded-xl mt-3">
-    <table class="w-full table-fixed mt-3">
-        <thead>
-            <tr>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100">Name</th>
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100"
-                    >Total Prize won</th
-                >
-                <th class="w-1/4 px-4 py-2 text-left text-gray-100"
-                    >Total Games Played</th
-                >
-            </tr>
-        </thead>
-        <tbody>
-            {#each teams as team, i}
-                <tr class={i % 2 === 0 ? "bg-[#0d131f]" : "bg-[#111827]"}>
-                    <td
-                        class="px-4 py-2 text-gray-100 flex items-center justify-between"
-                        ><div>
-                            <p>{team.name}</p>
-                            <p class="text-xs">
-                                {team.game} , {team.location}
-                            </p>
-                        </div>
-                    </td>
-                    <td class="px-4 py-2 text-gray-100">{team.prizePool}</td>
-                    <td class="px-4 py-2 text-gray-100">{team.totalGame}</td>
-                </tr>
-            {/each}
-        </tbody>
-    </table>
+<main class="p-2 mt-3">
+    <Table
+        class="w-full mt-3 table-fixed"
+        source={teams_table}
+        interactive
+        striped
+        bordered
+        hover
+        small
+    />
     <!-- pagination -->
     <div class="flex items-center justify-center mt-3">
         <button
-            class="bg-gray-800 text-gray-100 px-3 py-1 rounded-l hover:bg-gray-700"
+            class="px-3 py-1 text-gray-100 bg-gray-800 rounded-l hover:bg-gray-700"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block"
+                class="inline-block w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
             >
@@ -122,24 +115,24 @@
                 />
             </svg>
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             1
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             2
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             3
         </button>
-        <button class="bg-gray-800 text-gray-100 px-3 py-1 hover:bg-gray-700">
+        <button class="px-3 py-1 text-gray-100 bg-gray-800 hover:bg-gray-700">
             4
         </button>
         <button
-            class="bg-gray-800 text-gray-100 px-3 py-1 rounded-r hover:bg-gray-700"
+            class="px-3 py-1 text-gray-100 bg-gray-800 rounded-r hover:bg-gray-700"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block"
+                class="inline-block w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
             >
