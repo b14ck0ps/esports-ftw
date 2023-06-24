@@ -24,7 +24,7 @@
             window.removeEventListener("resize", checkScreenResolution);
         };
     });
-    $: console.log($page.route.id);
+    $: routeId = $page.route.id;
 </script>
 
 <body class="flex flex-col min-h-screen">
@@ -39,14 +39,23 @@
             </div>
             <div class="flex items-center gap-10 ml-5 font-semibold">
                 <!-- Navigation Links -->
-                <a href="/tournament" class="text-gray-300 hover:text-[#48f955]"
-                    >Tournament</a
+                <a
+                    href="/tournament"
+                    class="{routeId === '/tournament'
+                        ? 'text-[#48f955]'
+                        : 'text-gray-300'}  hover:text-[#48f955]">Tournament</a
                 >
-                <a href="/games" class="text-gray-300 hover:text-[#48f955]"
-                    >Games</a
+                <a
+                    href="/games"
+                    class="{routeId === '/games'
+                        ? 'text-[#48f955]'
+                        : 'text-gray-300'}  hover:text-[#48f955]">Games</a
                 >
-                <a href="/teams" class="text-gray-300 hover:text-[#48f955]"
-                    >Teams</a
+                <a
+                    href="/teams"
+                    class="{routeId === '/teams'
+                        ? 'text-[#48f955]'
+                        : 'text-gray-300'}  hover:text-[#48f955]">Teams</a
                 >
             </div>
         </nav>
