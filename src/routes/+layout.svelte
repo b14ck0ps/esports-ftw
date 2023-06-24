@@ -2,6 +2,7 @@
     import "../app.css";
     import logo from "$lib/assets/logo-with-text.png";
     import { onMount } from "svelte";
+    import { page } from "$app/stores";
 
     let isEnoughScreenAvailable = true;
 
@@ -23,6 +24,7 @@
             window.removeEventListener("resize", checkScreenResolution);
         };
     });
+    $: console.log($page.route.id);
 </script>
 
 <body class="flex flex-col min-h-screen">
