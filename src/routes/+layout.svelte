@@ -62,7 +62,14 @@
                         ? 'text-green-ftw'
                         : 'text-gray-300'}  hover:text-green-ftw">Teams</a
                 >
+                <a
+                    href="/about"
+                    class="{routeId === '/about'
+                        ? 'text-green-ftw'
+                        : 'text-gray-300'}  hover:text-green-ftw">About</a
+                >
             </div>
+
         </nav>
         <a
             href="/login"
